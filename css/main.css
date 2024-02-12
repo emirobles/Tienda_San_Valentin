@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Ubuntu:wght@400;700&display=swap');
+
+:root{
+    --clr-main: #c66e92;
+    --clr-main-light: #eedce9;
+    --clr-main-medium: #e3b1c8;
+    --clr-white: #ececec;
+    --clr-dark: #8f4773;
+    --clr-black: #3b1c2e;    
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    background-color: var(--clr-main);
+}
+
+
+h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul, button{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    /* background: #e3b1c8; revisar*/ 
+}
+
+aside h1{
+    padding: 2rem;
+    text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black;
+    color: var(--clr-white);
+}
+
+aside{
+    color: var(--clr-white);
+    background-color: var(--clr-main);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.logo{
+    font-weight: 400;
+    font-size: 4rem;
+    font-family: 'Protest Revolution', sans-serif;   
+}
+
+
+.footer-text{
+    font-size: .85rem;
+    color: var(--clr-main-light);
+}
+
+main{
+    background-color: var(--clr-main-medium);
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.main-title{
+    color: var(--clr-dark);
+    font-size: 2rem;
+    margin-bottom: 2rem;    
+}
+
+.container-products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+
+}
+
+.product-img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.product-detail{
+    background-color: var(--clr-dark);
+    color: var(--clr-white);
+    text-shadow: -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black, 1px 1px 1px black;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: -1rem;
+    position: relative; 
+    width: 100%;
+    
+}
+
+.product-title{
+    font-size: 1rem;
+    padding-bottom: .3rem;
+}
+
+.product-add{
+    border: 0;
+    background-color: var(--clr-main-light);
+    color: var(--clr-black);
+    padding: .5rem;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    cursor: pointer;
+    border: 2px solid var(--clr-main);
+    font: bold;
+    margin-top: .3rem;
+    transition: background-color .2s, color .2s;
+}
+
+.product-add:hover{
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+    border: 2px solid var(--clr-white);
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;    
+}
+
+.btn-menu{
+    background-color: transparent;
+    border: 0;
+    color: var(--clr-white);
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-shadow: -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black, 1px 1px 1px black;
+    display: flex;
+    gap: 1rem;
+    font-weight: 600;
+    padding: 1rem;    
+}
+
+.btn-menu.active {
+    background-color: var(--clr-main-medium);
+    color: var(--clr-black);
+    text-shadow: none;
+    font: bold;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
+    
+}
+
+.btn-menu.active::before {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    bottom: 100%;
+    right: 0;
+    background-color: transparent;
+    border-bottom-right-radius: .5rem;
+    box-shadow: 0 1rem 0 var(--clr-main-medium);
+}
+
+.btn-menu.active::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    top: 100%;
+    right: 0;
+    background-color: transparent;
+    border-top-right-radius: .5rem;
+    box-shadow: 0 -1rem 0 var(--clr-main-medium);
+}
